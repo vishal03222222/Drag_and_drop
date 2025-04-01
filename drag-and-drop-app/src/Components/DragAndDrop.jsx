@@ -5,7 +5,7 @@ export default class DragAndDrop extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      leftItems: ['list1', 'list2'],
+      leftItems: ['list1', 'list2',],
       rightItems: []
     };
   }
