@@ -1,0 +1,82 @@
+
+body {
+    background: radial-gradient(circle at center, #1a0130, #0b001b);
+    color: white;
+    font-family: Arial, sans-serif;
+ 
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+  }
+
+  #block {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+  }
+  
+
+  #left, #right {
+    border: 2px dashed white;
+    padding: 10px;
+    width: 220px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+
+  .one {
+    width: 180px;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: center;
+    font-weight: bold;
+    background: linear-gradient(90deg, #ff3b3b, #ff1c1c);
+    color: white;
+    border-radius: 5px;
+    cursor: grab;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0px 4px 10px rgba(255, 59, 59, 0.4);
+  }
+  
+
+  .one::before {
+    content: "⋮⋮";
+    cursor: grab;
+    font-size: 20px;
+    padding-right: 10px;
+  }
+  
+
+  h2 {
+    text-align: center;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.2);
+    margin-bottom: 20px;
+  }
+  
+  
+  #drag-arrow {
+    width: 100px;
+    height: 2px;
+    border: 2px dashed white;
+    position: absolute;
+    transform: rotate(-30deg);
+    top: 40%;
+    left: 50%;
+    animation: moveArrow 1.5s infinite;
+  }
+  
+  @keyframes moveArrow {
+    0% { transform: translateY(0) rotate(-30deg); }
+    50% { transform: translateY(-10px) rotate(-30deg); }
+    100% { transform: translateY(0) rotate(-30deg); }
+  }
+  
